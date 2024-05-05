@@ -19,7 +19,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
           onClick={() => {
             router.push("/");
           }}
-          className="flex mb-12 cursor-pointer items-center gap-2"
+          className="flex mb-12 cursor-pointer items-center gap-2 bg-transparent shadow-none "
         >
           <Image
             src="/icons/logo.svg"
