@@ -28,6 +28,7 @@ const config = {
           500: "#6172F3",
           700: "#3538CD",
         },
+        orange: "#ff9c00",
         success: {
           25: "#F6FEF9",
           50: "#ECFDF3",

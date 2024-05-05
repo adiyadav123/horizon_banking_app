@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const ibmplexserif = IBM_Plex_Serif({ subsets: ["latin"], weight: ['400', '700'], variable: '--font-ibmplexserif' });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const ibmplexserif = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Horizon",
   description: "A perfect banking app for everyone.",
-  icons: ['/icons/logo.svg']
+  icons: ["/icons/logo.svg"],
 };
 
 export default function RootLayout({
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ibmplexserif.variable} ${inter.variable}`}>{children}</body>
+      <body className={`${ibmplexserif.variable} ${inter.variable}`}>
+          {children}
+      </body>
     </html>
   );
 }
